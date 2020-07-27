@@ -1,0 +1,95 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+}
+
+/*Define robot variables*/
+.robot {
+  --robot-main-color: aqua;
+  --robot-eyes-color: #fff;
+  --robot-eyes-size: 30px;
+}
+
+.robot {
+  width: 300px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 1s;
+}
+
+.head {
+  width: 200px;
+  height: 150px;
+  background-color: var(--robot-main-color);
+  border-radius: 50% 50% 0% 0%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.head:hover {
+  transform: scaleX(1.2);
+  border-radius: 200px 200px 0 0;
+}
+
+.head .eyes {
+  width: var(--robot-eyes-size);
+  height: var(--robot-eyes-size);
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background-color: var(--robot-eyes-color);
+}
+
+.box {
+  display: flex;
+  width: 100%;
+  height: 170px;
+}
+
+.box * {
+  margin: 0 10px;
+}
+
+.arms-left,
+.arms-right {
+  width: 30px;
+  height: 100px;
+  background-color: var(--robot-main-color);
+  border-radius: 20px;
+}
+
+.body {
+  width: 200px;
+  height: 200px;
+  margin: 0px;
+  border-radius: 0 0 50px 50px;
+  background-color: var(--robot-main-color);
+}
+
+.foot {
+  display: flex;
+  justify-content: center;
+}
+
+.foot-left,
+.foot-right {
+  width: 30px;
+  height: 100px;
+  background-color: var(--robot-main-color);
+  border-radius: 20px;
+  margin: 0 10px;
+}
+
+.foot-right:hover {
+  transform: skewX(-20deg);
+}
